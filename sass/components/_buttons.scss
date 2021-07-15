@@ -1,0 +1,86 @@
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: $default-font-size;
+}
+
+.btn--white {
+  background-color: $color-white;
+  color: $color-gray-dark;
+}
+
+.btn--green {
+  background-color: $primary-color-light;
+  color: $color-white;
+    border: none;
+  cursor: pointer;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--white::after {
+  background-color: $color-white;
+}
+
+.btn--green::after {
+  background-color: $primary-color-light;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn--animated {
+  animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $primary-color-light;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $primary-color-light;
+    padding: 0.3rem;
+    transition: all 0.2s;
+  }
+  &:hover {
+    background-color: $primary-color-light;
+    color: $color-white;
+    box-shadow: $shadow-sm;
+    transform: translate(-0.2rem);
+  }
+  &:active {
+    box-shadow:$shadow-md;
+    transform: translate(0);
+  }
+}

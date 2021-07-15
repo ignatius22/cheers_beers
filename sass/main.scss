@@ -1,0 +1,87 @@
+@import "abstracts/functions";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "base/reset";
+
+@import "pages/home";
+@import "components/buttons";
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/footer";
+
+
+@import "layout/grid";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/card";
+@import "components/story";
+@import "components/bg-video";
+@import "components/form";
+@import "components/popup";
+
+
+
+
+.main__container {
+  margin: 4.5rem;
+  background-color: $color-gray-light;
+
+  &--container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &--error {
+      color: red;
+      position: absolute;
+      right: 57rem;
+      font-size: 3rem;
+    }
+
+    .info__section--container {
+      border: 1px $color-white solid;
+      padding: 1.2rem;
+      width: 30rem;
+      margin: 0.5rem;
+
+    
+
+      &--heading {
+        font-size: 1.5rem;
+        width: 95%;
+        color: $color-white;
+        text-align: center;
+        white-space: 150%;
+        line-height: 1.7;
+        text-transform: capitalize;
+      }
+      &--image {
+        height: 10rem;
+        padding: 0.5rem;
+      }
+
+      &--description {
+        width: 100%;
+        font-size: 1.4rem;
+        color: $color-white;
+        white-space: 150%;
+        line-height: 1.7;
+      }
+      &--name {
+        color: #95a5a6;
+        padding: .5rem;
+        text-transform: uppercase;
+        white-space: 150%;
+        font-weight: 800;
+      }
+    }
+  }
+}
